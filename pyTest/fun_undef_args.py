@@ -21,7 +21,7 @@ fn1_1(**myD) # dictionary를 2정의되지않은 인자로 넘겨줄때 **를 �
 a=10
 b=3.14
 c='abc'
-s1='a=%d b=%f c=%s' %(a,b,c)
+s1='a=%d b=%fun_memory_reference_count c=%s' %(a,b,c)
 # s2= '이름:%(name)s 나이:%(age)d' %myD
 s2= '이름:%(name)10s 나이:%(age)10d' %myD
 # s3= 'a={0}, b={1}, c={2}'.format(a,b,c)
