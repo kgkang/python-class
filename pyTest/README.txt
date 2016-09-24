@@ -69,3 +69,10 @@ python -m py_compile xxx.py
        window->preference->PyDev->Interpreters->Python Interpreter
        라이브러리 탭에서 New Folder를 클릭해서 라이브러리 폴더 추가
 
+
+<< package >>
+3rd 라이브러리가 package로 되어 있음
+new -> pydev package 로 생성
+__init__.py는 해당 모듈이 호출할 때 맨 처음 호출됨
+__pycache__ 폴더에는 import 파일을 컴파일 해서 임시 저장해놔서
+이후 호출할때 그 폴더에서 찾는다.
