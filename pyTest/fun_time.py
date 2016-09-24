@@ -16,12 +16,17 @@ print(sys.argv)
 # sys.stdout.write("korea")
 # sys.stdout.write("hello")
 
+# time 모듈 , 책 321
 import time
-
 tm = time.localtime()
-print(tm)
-print(tm.tm_year, tm.tm_mon, tm.tm_mday)
+
+# print(tm)
+# print(tm.tm_year, tm.tm_mon, tm.tm_mday)
 
 # 3초 후에 아래 hello가 출력된다. 
-time.sleep(3)
-print('hello')
+# time.sleep(3)
+# print('hello')
+
+# 책 p323
+tmf = time.strftime('%Y-%m-%d %H:%M:%S %p', tm)
+print(tmf)

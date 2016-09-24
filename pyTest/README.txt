@@ -76,3 +76,10 @@ new -> pydev package 로 생성
 __init__.py는 해당 모듈이 호출할 때 맨 처음 호출됨
 __pycache__ 폴더에는 import 파일을 컴파일 해서 임시 저장해놔서
 이후 호출할때 그 폴더에서 찾는다.
+
+<< 이클립스 한글 깨지는 문제 >>
+이클립스에 추가한 .txt파일이 깨져 보일 경우
+ => 파일의 properties(Alt-enter)에서 encoding을 파일의 인코딩 형식으로 설정해줘야 한다. (보통 euc-kr)
+ 
+이클립스 console창에 한글이 깨져 보일 경우
+ => run as.. => run configuration => common 탭 => encoding을 euc-kr로 설정해본다.
