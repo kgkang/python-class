@@ -16,6 +16,9 @@ class Test:
         print("init called ...")
         self.a = x
         self.b = y
+
+    def __del__(self): #소멸자 함수
+        print("del ... called" type(self))
         
     def setData(self, x, y):
         self.a = x # a가 self에 없으면 자동으로 만들어준다.
@@ -23,11 +26,26 @@ class Test:
         
     def show(self):
         print(self.a, self.b)
+
+def fn():
+    obj = Test(300,400)
+    obj.show()
+    return obj
         
 if __name__ == '__main__':
     obj = Test(100,200) # 생성자 함수를 호출해준다.
     obj1 = Test() # 인자를 안주고 호출할수 있다. 하지만 함수 선언부의 인자에 default 값이 선언되야 한다.
 #     obj.setData(30, 40)
+
     obj.show()
     obj1.show()
+    
+    obj2 = fn()
+    
+    obj3 = fn()
+    obj3.show()
+    del(obj3) # 명시적으로 소멸자를 호출할 수 있다.
+    print("end of main")
+    
+    # main 함수가 종료되면 남은 객체를 모두 소멸시킨다.
     
