@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss>
+	<channel>
+		<song album="album1">
+			<title> title 1</title>
+			<singer>singer 1</singer>
+		</song>
+
+		<song album="album2">
+			<title> title 2</title>
+			<singer>singer 2</singer>
+		</song>
+		<song album="album3">
+			<title> title 3</title>
+			<singer>singer 3</singer>
+		</song>
+	</channel>
+</rss>

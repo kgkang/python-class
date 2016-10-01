@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+	<product>
+		<sname>»ç°¡</sname>
+		<scount>20</scount>
+		<sdate>2015</sdate>
+	</product>
+	<product>
+		<sname>¹è</sname>
+		<scount>15</scount>
+		<sdate>2016</sdate>
+	</product>
+</products>
