@@ -6,7 +6,8 @@ Created on 2016. 9. 24.
 
 # 모듈 이름을 쓰기 귀찮은 경우
 
-from mymodule import hap, gop
+# from mymodule import hap, gop
+from mymodule1 import hap, gop
 # 해당 모듈의 모든 함수를 import할 경우
 # from mymodule1 import *
 

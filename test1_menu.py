@@ -8,9 +8,10 @@ from test1_module import mod_input,mod_output,mod_find
 
 choice = None
 products = []
+clear = lambda: os.system('cls' if os.name == 'nt' else 'clear')
 
 while True:
-    os.system('cls')
+    clear()
     print("제품 관리 프로그램")
     print("===================")
     print("1. 입력")
@@ -21,13 +22,13 @@ while True:
     choice = input("메뉴를 선택하시오:")
     
     if choice == "1":
-        os.system('cls')
+        clear()
         mod_input(products)
     elif choice == "2":
-        os.system('cls')
+        clear()
         mod_output(products)
     elif choice == "3":
-        os.system('cls')
+        clear()
         mod_find(products)
     elif choice == "4":
         print("종료합니다.")
