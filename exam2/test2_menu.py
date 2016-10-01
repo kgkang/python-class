@@ -4,6 +4,7 @@ Created on 2016. 9. 24.
 @author: Administrator
 '''
 import os
+import pickle
 from bs4 import BeautifulSoup
 
 class Module:
@@ -38,11 +39,11 @@ class Module:
         input("아무 키나 입력하세요")
     
     def mod_save(self):
-        sel = input("저장하시겠습니까? (번호선택)(1.xml 2.pickle 3.취소")
+        sel = input("저장하시겠습니까? (번호선택)(1.xml 2.pickle 3.취소)")
         if sel == '1':
             self.mod_save_xml()
-#         elif format == 2:
-#             self.mod_save_pickle()
+        elif format == 2:
+            self.mod_save_pickle()
 
     def mod_read(self):
         self.products = []
@@ -53,6 +54,10 @@ class Module:
                 self.products.append({'name': item.sname.string,
                                       'count':item.scount.string, 
                                       'date':item.sdate.string})
+            fp.close()
+        elif (os.path.isfile('products.dat')):
+            fp = open('prodcuts.dat')
+            self.products = pickle.load(fp)
             fp.close()
 
         
@@ -73,6 +78,10 @@ class Module:
         fp.write(xmlS)
         fp.close()
 
+    def mod_save_pickle(self):
+        fp = open("products.dat", "wb")
+        pickle.dump(self.products, fp)
+        fp.close()
 
 if __name__ == '__main__':
     
