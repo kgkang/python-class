@@ -35,7 +35,7 @@ def fileWrite1():
     
 def fileWrite2():
     fp = open('test.log', 'w')
-    fp.write('abc\def\ghi\jkl\mno')
+    fp.write('abc\ndef\nghi\njkl\nmno')
     fp.close()
 
 def fileRead1():
