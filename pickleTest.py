@@ -14,7 +14,7 @@ def obWrite():
     # myList = [10,20,30]
     datas=[{'name':'홍길동','age':30},
            {'name':'임걱정', 'age':40}]
-    fp = open("ob.txt","wb")
+    fp = open("ob.dat","wb")
     pickle.dump(datas,fp)
     print('before', fp.closed)
     fp.close()
@@ -25,7 +25,7 @@ def obWriteWith():
     # myList = [10,20,30]
     datas=[{'name':'홍길동','age':30},
            {'name':'임걱정', 'age':40}]
-    with open("ob.txt","wb") as fp:
+    with open("ob.dat","wb") as fp:
         pickle.dump(datas,fp)
         print('before', fp.closed)
 

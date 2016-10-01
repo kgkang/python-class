@@ -42,13 +42,13 @@ class Module:
         sel = input("저장하시겠습니까? (번호선택)(1.xml 2.pickle 3.취소)")
         if sel == '1':
             self.mod_save_xml()
-        elif format == 2:
+        elif sel == '2':
             self.mod_save_pickle()
 
     def mod_read(self):
         self.products = []
         if (os.path.isfile('products.xml')):
-            fp = open('products.xml')
+            fp = open('products.xml','rt',encoding='utf-8')
             soup = BeautifulSoup(fp, 'html.parser')
             for item in soup.findAll('product'):
                 self.products.append({'name': item.sname.string,
@@ -56,7 +56,7 @@ class Module:
                                       'date':item.sdate.string})
             fp.close()
         elif (os.path.isfile('products.dat')):
-            fp = open('prodcuts.dat')
+            fp = open('products.dat','rb')
             self.products = pickle.load(fp)
             fp.close()
 
@@ -74,12 +74,12 @@ class Module:
         xmlData.append('</products>')
         xmlS = '\n'.join(xmlData)
         
-        fp = open('products.xml', 'w')
+        fp = open('products.xml', 'wt', encoding='utf-8')
         fp.write(xmlS)
         fp.close()
 
     def mod_save_pickle(self):
-        fp = open("products.dat", "wb")
+        fp = open('products.dat','wb')
         pickle.dump(self.products, fp)
         fp.close()
 
